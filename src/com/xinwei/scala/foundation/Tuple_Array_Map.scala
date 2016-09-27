@@ -35,6 +35,8 @@ object Tuple_Array_Map {
     //获取文件
     //Source.fromFile("")
 
+    //测试获取包对象的成员
+    //println(packageName)
   }
 
 }
