@@ -27,5 +27,6 @@ object InputOutput {
     var s = Console.readLine()
     println(s)
   }
+  Math.random()
 
 }

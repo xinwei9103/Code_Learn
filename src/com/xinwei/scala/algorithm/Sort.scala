@@ -1,4 +1,4 @@
-package com.xinwei.scala.project
+package com.xinwei.scala.algorithm
 
 /**
   * Created by xinwei on 9/26/2016.
