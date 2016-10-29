@@ -6,11 +6,16 @@ package com.xinwei.scala.algorithm
 object Sort {
 
   def main(args: Array[String]) {
+    /*
     var arr = Array(4, 7, 2, 1, 10, 20, 5, 6, 7, 7, 1, 1, 1)
     arr = MergeSort(arr)
     for (i <- arr) {
       print(i + " ")
     }
+    */
+    println(mergeSort((x:Int,y:Int)=> x<y)(List(3,9,7,5)))
+    val reversed_mergeSort = mergeSort((x:Int,y:Int) => x>y)(_)
+    println(reversed_mergeSort(List(3,9,7,5)))
   }
 
   def MergeSort(arr: Array[Int]): Array[Int] = {
@@ -63,5 +68,32 @@ object Sort {
     }
     res
   }
+
+  //merge sort模式匹配 颗粒化
+  def mergeSort[T](less: (T, T) => Boolean)(input: List[T]): List[T] = {
+
+    def merge(xList: List[T], yList: List[T]): List[T] = {
+      (xList, yList) match {
+        case (Nil,_) => yList
+        case (_,Nil)=> xList
+        case (x::xTail,y::yTail) =>{
+          if(less(x,y)){
+            x::merge(xTail,yList)
+          }else{
+            y::merge(xList,yTail)
+          }
+        }
+      }
+    }
+    val n = input.length/2
+    if(n==0) input
+    else{
+      val (x,y) = input.splitAt(n)
+      merge(mergeSort(less)(x),mergeSort(less)(y))
+    }
+  }
+
+
+
 
 }

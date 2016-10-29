@@ -11,7 +11,7 @@ object Abstract {
   }
 
 }
-
+//默认val
 abstract class AbstractTeacher(val name:String){
   //抽象类的抽象字段
   var id:Int
