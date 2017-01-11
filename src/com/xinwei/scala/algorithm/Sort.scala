@@ -13,9 +13,12 @@ object Sort {
       print(i + " ")
     }
     */
+
     println(mergeSort((x:Int,y:Int)=> x<y)(List(3,9,7,5)))
     val reversed_mergeSort = mergeSort((x:Int,y:Int) => x>y)(_)
     println(reversed_mergeSort(List(3,9,7,5)))
+
+
   }
 
   def MergeSort(arr: Array[Int]): Array[Int] = {
