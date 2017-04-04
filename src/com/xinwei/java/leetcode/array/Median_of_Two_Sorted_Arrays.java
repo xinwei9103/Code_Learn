@@ -14,11 +14,16 @@ Find the median of the two sorted arrays. The overall run time complexity should
 
 /*
 
-    思路 time O(log(m+n)) binary search
-    看算法课件 kth
+    思路 time O(log(m+n)) binary search median
  */
 
 public class Median_of_Two_Sorted_Arrays {
+
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+
+
+        return 0;
+    }
 
 
 
