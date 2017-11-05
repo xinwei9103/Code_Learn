@@ -1,6 +1,7 @@
 package com.xinwei.java.leetcode.array;
 
 import apple.laf.JRSUIUtils;
+import com.xinwei.java.leetcode.testUtil.TreeNode;
 
 import java.util.LinkedList;
 
@@ -21,15 +22,7 @@ You may assume that duplicates do not exist in the tree.
 
 public class Construct_Binary_Tree_from_Preorder_and_Inorder_Traversal {
 
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
 
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 
 
 
